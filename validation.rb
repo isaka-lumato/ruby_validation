@@ -23,7 +23,7 @@ end
 
 class User
   include Validation
-  
+
   attr_accessor :name
   validate :name, presence:true
   def initialize(name)
@@ -31,6 +31,5 @@ class User
   end
 
 end
-c = User.new 
-c.name = ""
+c = User.new("") 
 puts c.valid?
